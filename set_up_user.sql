@@ -1,0 +1,6 @@
+CREATE TABLE users (
+  id            INTEGER PRIMARY KEY AUTOINCREMENT,
+  email         TEXT NOT NULL UNIQUE COLLATE NOCASE,   
+  hashed_password TEXT NOT NULL
+
+);
