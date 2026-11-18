@@ -9,10 +9,5 @@ CREATE TABLE post (
     status TEXT NOT NULL
            CHECK (LOWER(status) IN ('live', 'expired'))
            DEFAULT 'live',
-
-    like_count INTEGER NOT NULL DEFAULT 0,
-    dislike_count INTEGER NOT NULL DEFAULT 0,
-    comments TEXT,
-
     FOREIGN KEY (author_id) REFERENCES users(id)
 );

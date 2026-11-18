@@ -1,0 +1,3 @@
+python -c "import secrets; print(secrets.token_hex(32))"
+
+$env:JWT_SECRET = "4662b7e7e73ebaa966c355049c9a1ca8cb6040b596e24fd45c51b4cef4fa266a"

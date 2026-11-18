@@ -2,7 +2,7 @@ from fastapi import FastAPI
 
 import models
 from database import engine
-from routers import auth, profile
+from routers import auth, profile,post
 
 
 def create_app(db_engine=engine):
@@ -10,6 +10,7 @@ def create_app(db_engine=engine):
     app = FastAPI()
     app.include_router(auth.router, prefix="/auth")
     app.include_router(profile.router, prefix="/profile")
+    app.include_router(post.router, prefix="/posts")
 
     @app.get("/")
     def home():
